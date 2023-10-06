@@ -5,6 +5,6 @@ import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Client;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.DetailFacture;
 
 public interface DetailFactureRepository extends CrudRepository<DetailFacture, Long> {
-    DetailFacture findDetailFactureByFactureClientIdClient(long facture_client_idClient);
+    DetailFacture findByFactureClientIdClient(long facture_client_idClient);
 
 }

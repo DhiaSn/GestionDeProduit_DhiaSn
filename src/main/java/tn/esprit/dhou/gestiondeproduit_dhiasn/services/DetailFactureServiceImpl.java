@@ -15,7 +15,7 @@ public class DetailFactureServiceImpl implements IDetailFactureService {
 
     @Override
     public DetailFacture getDetailFactureByClientId(Long id) {
-        return _detailFacRepo.findDetailFactureByFactureClientIdClient(id);
+        return _detailFacRepo.findByFactureClientIdClient(id);
     }
 
     @Override
