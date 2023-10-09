@@ -3,6 +3,7 @@ package tn.esprit.dhou.gestiondeproduit_dhiasn.services;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Client;
+import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Fournisseur;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Stock;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.repositories.StockReporitory;
 
@@ -39,4 +40,6 @@ public class StockServiceImpl implements IStockService {
     public void removeStock(Long id) {
         _stockRepo.deleteById(id);
     }
+
+
 }

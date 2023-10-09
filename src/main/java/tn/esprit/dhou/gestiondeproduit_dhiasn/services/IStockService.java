@@ -1,5 +1,6 @@
 package tn.esprit.dhou.gestiondeproduit_dhiasn.services;
 
+import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Fournisseur;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Stock;
 
 import java.util.List;
@@ -15,4 +16,6 @@ public interface IStockService {
     Stock retrieveStock(Long s);
 
     void removeStock(Long id);
+
+
 }

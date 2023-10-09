@@ -3,6 +3,7 @@ package tn.esprit.dhou.gestiondeproduit_dhiasn.services;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Client;
+import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Fournisseur;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Produit;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.repositories.ProduitRepository;
 
@@ -39,4 +40,6 @@ public class ProduitServiceImpl implements IProduitService {
     public void removeProduit(Long id) {
         _produitRepo.deleteById(id);
     }
+
+
 }

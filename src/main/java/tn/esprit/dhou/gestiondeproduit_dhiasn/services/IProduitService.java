@@ -17,4 +17,6 @@ public interface IProduitService {
     Produit retrieveProduit(Long id);
 
     void removeProduit(Long id);
+
+
 }
