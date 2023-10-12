@@ -18,5 +18,5 @@ public interface IProduitService {
 
     void removeProduit(Long id);
 
-
+    List<Produit> getProduitByFourniseur(Fournisseur f);
 }

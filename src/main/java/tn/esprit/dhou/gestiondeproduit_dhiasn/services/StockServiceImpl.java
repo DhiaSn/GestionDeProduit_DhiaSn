@@ -41,5 +41,8 @@ public class StockServiceImpl implements IStockService {
         _stockRepo.deleteById(id);
     }
 
-
+    @Override
+    public List<Stock> getStockByFourniseur(Fournisseur f) {
+        return _stockRepo.getStockByFourniseur(f);
+    }
 }

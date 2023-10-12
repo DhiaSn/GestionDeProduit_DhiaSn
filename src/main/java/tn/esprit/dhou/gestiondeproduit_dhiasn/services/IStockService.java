@@ -17,5 +17,5 @@ public interface IStockService {
 
     void removeStock(Long id);
 
-
+    List<Stock> getStockByFourniseur(Fournisseur f);
 }

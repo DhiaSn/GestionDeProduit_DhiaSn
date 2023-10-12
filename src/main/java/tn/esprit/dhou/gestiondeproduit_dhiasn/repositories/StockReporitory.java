@@ -9,6 +9,7 @@ import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Stock;
 import java.util.List;
 
 public interface StockReporitory extends CrudRepository<Stock, Long> {
-
+    @Query(value = "FROM Stock s JOIN Produit p on (p.stock.idStock = s.idStock ) where :f member of p.fournisseurs")
+    List<Stock> getStockByFourniseur(Fournisseur f);
 
 }

@@ -41,5 +41,10 @@ public class ProduitServiceImpl implements IProduitService {
         _produitRepo.deleteById(id);
     }
 
-
+    @Override
+    public List<Produit> getProduitByFourniseur(Fournisseur f) {
+        if(f != null && f.getIdFourisseur() != 0)
+            return _produitRepo.getProduitByFourniseur(f);
+        return  null;
+    }
 }
