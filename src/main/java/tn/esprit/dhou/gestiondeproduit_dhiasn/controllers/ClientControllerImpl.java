@@ -1,16 +1,15 @@
 package tn.esprit.dhou.gestiondeproduit_dhiasn.controllers;
 
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Client;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.services.IClientService;
 
 import java.util.List;
 
-@Controller
 @AllArgsConstructor
-
+@RestController
+@RequestMapping("/client")
 public class ClientControllerImpl {
     IClientService _userServ;
 
