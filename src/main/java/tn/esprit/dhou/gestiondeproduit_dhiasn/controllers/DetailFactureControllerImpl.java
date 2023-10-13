@@ -26,6 +26,12 @@ public class DetailFactureControllerImpl {
         return _detailFacService.retrieveDetailFacture(id);
     }
 
+    @GetMapping("/getDetailFactureByClientId/{clientId}")
+    @ResponseBody
+    public DetailFacture getDetailFactureByClientId(@PathVariable Long clientId) {
+        return _detailFacService.getDetailFactureByClientId(clientId);
+    }
+
     @PostMapping("/")
     @ResponseBody
     public DetailFacture postDetailFacture(@RequestBody DetailFacture c) {
