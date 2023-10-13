@@ -26,6 +26,14 @@ public class SpringDocConfig {
                 .url("https://www.linkedin.com/in/dhia-snoussi/");
     }
 
+    @Bean
+    public GroupedOpenApi clientPublicApi() {
+        return GroupedOpenApi.builder()
+                .group("Only Client Management API")
+                .pathsToMatch("/Client/**")
+                .pathsToExclude("**")
+                .build();
+    }
 
     @Bean
     public GroupedOpenApi productPublicApi() {

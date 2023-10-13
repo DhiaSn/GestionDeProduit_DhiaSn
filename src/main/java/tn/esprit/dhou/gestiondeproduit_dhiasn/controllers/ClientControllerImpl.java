@@ -9,7 +9,7 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/client")
+@RequestMapping("/Client")
 public class ClientControllerImpl {
     IClientService _userServ;
 
