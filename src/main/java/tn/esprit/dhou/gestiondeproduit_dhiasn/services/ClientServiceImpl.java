@@ -3,8 +3,10 @@ package tn.esprit.dhou.gestiondeproduit_dhiasn.services;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Client;
+import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Enums.CategoryClient;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.repositories.ClientRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 

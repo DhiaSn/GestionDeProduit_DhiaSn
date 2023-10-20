@@ -1,7 +1,9 @@
 package tn.esprit.dhou.gestiondeproduit_dhiasn.services;
 
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Client;
+import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Enums.CategoryClient;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface IClientService {

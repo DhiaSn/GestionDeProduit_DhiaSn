@@ -19,4 +19,7 @@ public interface IProduitService {
     void removeProduit(Long id);
 
     List<Produit> getProduitByFourniseur(Fournisseur f);
+
+    void assignProduitToStock(Long idProduit, Long idStock);
+    public void assignFournisseurToProduit(Long fournisseurId, Long produitId) ;
 }

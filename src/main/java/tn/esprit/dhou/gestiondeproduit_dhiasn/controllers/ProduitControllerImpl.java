@@ -54,4 +54,12 @@ public class ProduitControllerImpl {
     public void deleteProduit(@PathVariable long id) {
         _prodServ.removeProduit(id);
     }
+
+    @PutMapping("/{produitId}/stock/{stockId}")
+    @ResponseBody
+    public void assignProduitToStock(@PathVariable Long produitId,@PathVariable Long stockId)
+    {
+        _prodServ.assignProduitToStock(produitId, stockId);
+    }
+
 }

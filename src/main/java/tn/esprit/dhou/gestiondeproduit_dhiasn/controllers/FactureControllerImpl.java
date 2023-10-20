@@ -1,11 +1,12 @@
 package tn.esprit.dhou.gestiondeproduit_dhiasn.controllers;
 
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Enums.CategoryClient;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.entities.Facture;
 import tn.esprit.dhou.gestiondeproduit_dhiasn.services.IFactureService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @AllArgsConstructor
@@ -47,4 +48,26 @@ public class FactureControllerImpl {
     public void deleteFacture(@PathVariable long id) {
         _facServ.removeFacture(id);
     }
+
+    @PutMapping("/Client/{idClient}")
+    @ResponseBody
+    public  Facture addFacture(@RequestBody Facture f,@PathVariable Long idClient) {
+        if(idClient != 0)
+            return _facServ.addFacture(f, idClient);
+        return null;
+    }
+
+    @GetMapping("/ChiffreAffaire/{categorieClient}/{startDate}/{endDate}")
+    @ResponseBody
+    public float getChiffreAffaireParCategorieClient(@PathVariable CategoryClient categorieClient,@PathVariable LocalDate startDate,@PathVariable LocalDate endDate)
+    {
+        return _facServ.getChiffreAffaireParCategorieClient(categorieClient, startDate, endDate);
+    }
+
+    @GetMapping("/RevnueBrutProduit/{idProduit}//{startDate}/{endDate}")
+    @ResponseBody
+    float getRevenuBrutProduit(@PathVariable Long idProduit,@PathVariable LocalDate startDate,@PathVariable LocalDate endDate) {
+        return _facServ.getRevenuBrutProduit(idProduit, startDate, endDate);
+    }
+
 }
