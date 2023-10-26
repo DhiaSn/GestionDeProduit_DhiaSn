@@ -77,6 +77,7 @@ public class ProduitServiceImpl implements IProduitService {
             Set<Fournisseur> fournisseurs = new HashSet<Fournisseur>();
             fournisseurs.add(_fourRepo.findById(fournisseurId).get());
             produit.setFournisseurs(fournisseurs);
+            _produitRepo.save(produit);
         }
     }
 
